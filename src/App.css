@@ -9,3 +9,21 @@ body{
     outline: none;
     background-color: #fff;
 }
+
+.container {
+    width: 100%;
+    margin: 1em auto;
+    background-color: transparent;
+}
+
+.grid {
+    display: grid;
+    margin-left: .5px;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.6em;
+    justify-content: center;
+}
+
+.card-img-top {
+
+}
