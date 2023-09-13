@@ -20,10 +20,52 @@ body{
     display: grid;
     margin-left: .5px;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 0.6em;
+    grid-gap: 3em;
     justify-content: center;
 }
 
-.card-img-top {
+.bg-img {
+    background-image: transparent;
+    width: 100%;
 
+}
+
+.head-text {
+    position: relative;
+    color: #0e0808;
+}
+
+.center_text{
+    position: absolute;
+    bottom: 40%;
+    left: 20px;
+    background-color: none;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50%;
+}
+
+
+    .label {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px;
+        height: 47px;
+        width: 100%;
+        align-items: center;
+        }
+
+.label .text-wrapper {
+    color: #000000;
+    font-family: "DM Sans-Bold", Helvetica;
+    font-size: 36px;
+    font-weight: 700;
+    left: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    top: 0;
+   
+    
 }
