@@ -69,3 +69,26 @@ body{
    
     
 }
+
+@media only screen and (max-width: 670px) {
+    .grid{
+       display: inline;
+    }
+
+    .center_text{
+        position: absolute;
+        top: 5px;
+        background-color: none;
+        color: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 80%;
+        font-size: 14px;
+        right: 10px;
+    }
+
+    .label{
+        display: grid;
+
+    }
+}

@@ -9,8 +9,7 @@ import imdb from "./5977585.png";
 import tomato from './82ace228929a9068f3eb189a3ea549a7.png';
 import tv from './376a54ffd2dfb11ef1f3a8b513491895.png';
 import chevronright from './chevronright_120129.png';
-import menu from './graphy-logo-hamburger-button-menu-dropdown-list-pink-text-line-circle-png-clipart-thumbnail.jpg';
-import { FontAwesomeIcon,  faMagnifyingGlass} from '@fortawesome/react-fontawesome';
+import menu from './menu-icon-style-vector.jpg';
 
 const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=93f2cc51175884f5031b4118682aa465";
 const API_SEARCH='https://api.themoviedb.org/3/search/movie?query&api_key=93f2cc51175884f5031b4118682aa465';
@@ -69,13 +68,13 @@ const ChangeHandler=(e)=>{
     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" ><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></Button>
    </Form>
 
-    <Button type='sumbit' variant='secondary' onClick={Sign} style={{backgroundColor:'transparent', border:'none', color:'black'}}>sign in<img src={menu} style={{width:'30px', backgroundColor:'red'}}/></Button>
+    <Button type='sumbit' variant='secondary' onClick={Sign} style={{backgroundColor:'transparent', border:'none', color:'black'}}>Sign in<img src={menu} style={{width:'30px', backgroundColor:'red'}}/></Button>
   </Container>
 </Navbar>
 <div className='head-text'>
 <img src={img} style={{width:'100%'}}/>
 <div className='center_text'>
-<h3>John Wick 3 : <br></br> Parabellum</h3>
+<h3>John Wick 3: <br></br> Parabellum</h3>
 <p></p>
 <p><img src={imdb} style={{width:'30px'}}/>&nbsp;&nbsp;8.6 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={tomato} style={{width:'20px'}}/>&nbsp;&nbsp;97%
@@ -91,7 +90,7 @@ price tag on his head, he is the target of hit men and women everywhere.</p>
 </div>
 <div className='container'>
     <div className='grid'>
-    {movies.map((moviesReq)=>
+    {movies.slice(0,12).map((moviesReq)=>
     <MovieBox key={moviesReq.id} {...moviesReq}/>)}
   </div>
   </div>

@@ -13,16 +13,16 @@ const MovieBox =({title, poster_path, vote_average, release_date, runtime, overv
     const handleshow=()=>setshow(true);
     const handleClose=()=>setshow(false);
     return(
-        <div className="card text-center bg-light mb-3">
-            <div className="card-body">
-              <img className="card-img-top" src={API_IMG+poster_path}/>
+        <div className="card text-center bg-light mb-3" >
+            <div className="card-body" data-testid='movie-card' style={{width:'100%', border:'none'}}>
+              <img className="card-img-top" data-testid='movie-poster' src={API_IMG+poster_path}/>
               <div className="card-body">
                 {title}
                 <p><img src={imdb} style={{width:'30px'}}/>&nbsp;&nbsp;&nbsp;
                 {vote_average} 
                 &nbsp;&nbsp;&nbsp;<img src={tomato} style={{width:'20px'}}/>&nbsp;&nbsp;&nbsp;80%
                 </p>
-                
+                     <p>{release_date}</p>
                   <button type="button" className="btn btn-transparent" onClick={handleshow}>view more</button>
                   <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
