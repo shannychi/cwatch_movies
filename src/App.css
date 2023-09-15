@@ -70,9 +70,36 @@ body{
     
 }
 
-@media only screen and (max-width: 670px) {
-    .grid{
-       display: inline;
+.footerDiv {
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    align-items:center; 
+    height: 100%;
+    padding: 50px;
+}
+
+.div1 {
+display: flex;
+margin: auto;
+gap: 50px;
+justify-content: center;
+padding: 20px;
+}
+
+.div2 {
+    display: flex;
+    margin: auto;
+    gap: 50px;
+    justify-content: center;
+    padding: 20px;
+    font-size: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media only screen and (max-width: 768px) {
+    .grid {
+       display: table-row;
+       justify-content: baseline;
     }
 
     .center_text{
@@ -83,12 +110,23 @@ body{
         padding-left: 10px;
         padding-right: 10px;
         width: 80%;
-        font-size: 14px;
-        right: 10px;
+        font-size: 12px;
+        left: 5px;
     }
 
     .label{
-        display: grid;
+        display: none;
 
     }
+
+    .container {
+        width: 50%;
+        margin: 1em auto;
+        background-color: transparent;
+    }
+
+    #Navbar {
+        display: inline;
+        }
 }
+

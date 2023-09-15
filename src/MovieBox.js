@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Modal } from 'react-bootstrap';
-import imdb from './5977585.png';
-import tomato from './82ace228929a9068f3eb189a3ea549a7.png'
+import imdb from './image/5977585.png';
+import tomato from './image/82ace228929a9068f3eb189a3ea549a7.png'
 
 const API_IMG="https://image.tmdb.org/t/p/w500/"
 
@@ -29,9 +29,9 @@ const MovieBox =({title, poster_path, vote_average, release_date, runtime, overv
                         <Modal.Title></Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                    <img className="card-img-top" style={{width: '14rem'}} src={API_IMG+poster_path}/>
+                    <img className="card-img-top" style={{width:'14rem'}} src={API_IMG+poster_path}/>
                     <h3>{title}</h3>
-                    <h4>ImDb: {vote_average}</h4>
+                    <h4><img src={imdb} style={{width:'30px'}} alt="imdb"/>: {vote_average}</h4>
                     <h5>Release Date: {release_date}</h5>
                     <h6></h6>
                     <br></br>

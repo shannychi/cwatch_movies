@@ -3,13 +3,14 @@ import './App.css';
 import MovieBox from './MovieBox';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Container, Form, FormControl, Nav, Navbar,} from 'react-bootstrap';
-import img from "./header img.jpg";
+import img from "./image/header img.jpg";
 import Sign from './Sign';
-import imdb from "./5977585.png";
-import tomato from './82ace228929a9068f3eb189a3ea549a7.png';
-import tv from './376a54ffd2dfb11ef1f3a8b513491895.png';
-import chevronright from './chevronright_120129.png';
-import menu from './menu-icon-style-vector.jpg';
+import imdb from "./image/5977585.png";
+import tomato from './image/82ace228929a9068f3eb189a3ea549a7.png';
+import tv from './image/376a54ffd2dfb11ef1f3a8b513491895.png';
+import chevronright from './image/chevronright_120129.png';
+import menu from './image/menu-icon-style-vector.jpg';
+import Footer from './Footer';
 
 const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=93f2cc51175884f5031b4118682aa465";
 const API_SEARCH='https://api.themoviedb.org/3/search/movie?query&api_key=93f2cc51175884f5031b4118682aa465';
@@ -94,6 +95,12 @@ price tag on his head, he is the target of hit men and women everywhere.</p>
     <MovieBox key={moviesReq.id} {...moviesReq}/>)}
   </div>
   </div>
+  <p></p>
+  <p></p>
+  <div>
+  <Footer/>
+  </div>
+  
   </>
   
  );
