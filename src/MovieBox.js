@@ -13,30 +13,30 @@ const MovieBox =({title, poster_path, vote_average, release_date, runtime, overv
     const handleshow=()=>setshow(true);
     const handleClose=()=>setshow(false);
     return(
-        <div className="card text-center bg-light mb-3" >
+        <div className="card text-center bg-light mb-3"  data-testid='movie-card'>
             <div className="card-body" data-testid='movie-card' style={{width:'100%', border:'none'}}>
-              <img className="card-img-top" data-testid='movie-poster' src={API_IMG+poster_path}/>
+              <img className="card-img-top" data-testid='movie-poster' src={API_IMG+poster_path} alt="movie-poster"/>
               <div className="card-body">
-                {title}
-                <p><img src={imdb} style={{width:'30px'}}/>&nbsp;&nbsp;&nbsp;
+                <p data-testid='movie-title'>{title}</p>
+                <p><img src={imdb} style={{width:'30px'}} alt="imdb"/>&nbsp;&nbsp;&nbsp;
                 {vote_average} 
-                &nbsp;&nbsp;&nbsp;<img src={tomato} style={{width:'20px'}}/>&nbsp;&nbsp;&nbsp;80%
+                &nbsp;&nbsp;&nbsp;<img src={tomato} style={{width:'20px'}} alt="tomato"/>&nbsp;&nbsp;&nbsp;80%
                 </p>
-                     <p>{release_date}</p>
+                     <p data-testid='movie-release-data'>{release_date}</p>
                   <button type="button" className="btn btn-transparent" onClick={handleshow}>view more</button>
                   <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
                         <Modal.Title></Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                    <img className="card-img-top" style={{width:'14rem'}} src={API_IMG+poster_path}/>
-                    <h3>{title}</h3>
+                    <img className="card-img-top" style={{width:'14rem'}} src={API_IMG+poster_path} data-testid='movie-poster' alt="poster"/>
+                    <h3 data-testid='movie-title'>{title}</h3>
                     <h4><img src={imdb} style={{width:'30px'}} alt="imdb"/>: {vote_average}</h4>
-                    <h5>Release Date: {release_date}</h5>
-                    <h6></h6>
+                    <h5  data-testid='movie-release-data'>Release Date: {release_date}</h5>
+                    
                     <br></br>
                     <h6>Overview</h6>
-                    <p>{overview}</p>
+                    <p  data-testid='movie-overview'>{overview}</p>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button varient="secondary" onClick={handleClose}>close</Button>
